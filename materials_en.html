@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Начална страница</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "mundial", sans-serif, "mundial", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .header {
+        background-color: #2e7d32;
+        padding: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo img {
+        width: 250px;
+        height: auto;
+      }
+
+      .nav {
+        display: flex;
+        gap: 50px; /* Намаляваме разстоянието между елементите */
+        margin-right: 10%;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 2.3em;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: #a5d6a7;
+      }
+
+      .materials {
+        background-image: url("images/background.forest.webp");
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        height: 100vh;
+        font-size: 2em;
+      }
+      .materials h1 {
+        margin: 0;
+      }
+      .transparentBox {
+        background-color: rgba(255, 255, 255, 0.7);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      footer {
+        width: 100%;
+        background-color: #2e7d32;
+        color: white;
+        margin-bottom: none;
+        text-align: center;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .footer-left,
+      .footer-middle,
+      .footer-right {
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+        padding: 10px;
+      }
+      .footer-middle,
+      .footer-right {
+        padding-top: 5%;
+        font-size: 150%;
+      }
+
+      .footer-left img {
+        width: 80%;
+      }
+
+      .footer-bottom {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .dropdown {
+        width: 500px;
+        padding-top: 10%;
+        align-self: center;
+      }
+      .dropdown-title {
+        background: #333;
+        color: white;
+        padding: 20px;
+        border-style: solid;
+        border-color: yellow;
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
+        margin-left: 200px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bolder;
+        font-size: large;
+        transition: color 0.3s;
+      }
+      .dropdown-title:hover {
+        color: #999;
+      }
+      .dropdown-content {
+        display: none;
+        padding: 20px;
+        padding-right: none;
+        height: 0;
+        opacity: 0;
+        margin-left: 200px;
+        background: #333;
+        overflow: hidden;
+        width: 100%;
+        color: white;
+        border-style: solid;
+        border-color: yellow;
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+      }
+
+      .active {
+        display: block;
+      }
+      .activeDropdown {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body style="padding: none">
+    <div class="header">
+      <div class="logo">
+        <a href="index_en.html">
+          <img src="images/solargreenlogo-removebg.png" alt="" />
+        </a>
+      </div>
+      <div class="nav">
+        <a href="recycling_en.html">Recycling</a>
+        <a href="materials_en.html">Materials</a>
+        <a href="contact_en.html">Contact</a>
+        <a href="materials.html"
+          ><img
+            src="images/bgFlag.png"
+            style="
+              height: auto;
+              width: 100px;
+              border-radius: 10%;
+              border-color: #2e7d32;
+            "
+            alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="materials">
+      <div class="transparentBox">
+        <h1 style="padding-left: 5%; padding-top: 20%">Материали</h1>
+        <p style="padding-left: 5%">
+          Използването на соларна енергия,изисква да рециклиране на соларните
+          панели.
+        </p>
+        <p style="padding-left: 5%">
+          Ние връщаме материалите от коита са изградени и ги връщаме обратно в
+          изработката на нови.
+        </p>
+      </div>
+    </div>
+
+    <div style="height: 100%; background-color: #333">
+      <img
+        src="images/recycled_panel.png"
+        style="float: right; height: 100%; width: 50%; max-width: 100%"
+      />
+      <div class="dropdown">
+        <div
+          class="dropdown-title"
+          id="title1"
+          onclick="toggleDropdown('content1')"
+        >
+          стъкло
+        </div>
+        <div class="dropdown-content" id="content1">
+          Защитното стъкло на соларния панел съставлява около 70% от теглото му.
+          Чрез нашата усъвършенствана технология за рециклиране възстановяваме
+          стъклото с висока чистота, подходящо за контейнерно и в бъдеще за
+          соларно стъкло.
+        </div>
+        <div
+          class="dropdown-title"
+          id="title2"
+          onclick="toggleDropdown('content2')"
+        >
+          пластмаса
+        </div>
+        <div class="dropdown-content" id="content2">
+          В соларните панели се използват различни пластмаси, като най-често
+          срещаните са EVA и PVF. Те съставляват около 9% от общата маса.
+          Въпреки трудното им рециклиране, ние търсим нови приложения, далеч от
+          изгарянето.
+        </div>
+        <div
+          class="dropdown-title"
+          id="title3"
+          onclick="toggleDropdown('content3')"
+        >
+          алуминий
+        </div>
+        <div class="dropdown-content" id="content3">
+          Алуминият в соларните панели е основно в рамката и съставлява около
+          15% от масата. Възстановеният алуминий се предава на големи леярни,
+          спестявайки около 95% енергия спрямо новодобития..
+        </div>
+        <div
+          class="dropdown-title"
+          id="title4"
+          onclick="toggleDropdown('content4')"
+        >
+          мед
+        </div>
+        <div class="dropdown-content" id="content4">
+          Шините и свързващите кабели на соларния панел съдържат 1% мед. Тя може
+          да бъде рециклирана на 100% и използвана за нови кабели или
+          проводници.
+        </div>
+        <div
+          class="dropdown-title"
+          id="title5"
+          onclick="toggleDropdown('content5')"
+        >
+          сребро
+        </div>
+        <div class="dropdown-content" id="content5">
+          Среброто съставлява само 0,1% от масата на соларния панел, но е
+          най-ценният му материал. То се намира върху предната и задната част на
+          клетките и служи като електрически проводник. След рециклиране се
+          пречиства и използва отново за технически приложения.
+        </div>
+        <div
+          class="dropdown-title"
+          id="title6"
+          onclick="toggleDropdown('content6')"
+        >
+          силиций
+        </div>
+        <div class="dropdown-content" id="content6">
+          Силицият е техническото сърце на соларния панел. Той преобразува
+          слънчевата енергия в електрическа чрез фотоелектрическия ефект.
+          Възстановеният силиций се преработва в чист силиций от нашия партньор
+          Circular Silicon.
+        </div>
+      </div>
+    </div>
+    <script>
+      var titleId;
+      function toggleDropdown(id) {
+        var content = document.getElementById(id);
+        content.classList.toggle("active");
+        switch (id) {
+          case "content1":
+            titleId = "title1";
+            break;
+          case "content2":
+            titleId = "title2";
+            break;
+          case "content3":
+            titleId = "title3";
+            break;
+          case "content4":
+            titleId = "title4";
+            break;
+          case "content5":
+            titleId = "title5";
+            break;
+          case "content6":
+            titleId = "title6";
+            break;
+        }
+        var styleChange = document.getElementById(titleId);
+        styleChange.classList.toggle("activeDropdown");
+      }
+    </script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="images/solargreenlogo-removebg.png"
+            alt="Solar Materials Logo"
+          />
+          <div>
+            <h2>SOLAR GREEN</h2>
+            <p>Пловдив, България</p>
+            <p>ул.Чемшир 11</p>
+            <p>
+              📧 <a href="mailto:info@solargreen.com">info@solargreen.com</a>
+            </p>
+            <p>📞 +359 7777 7777</p>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <h3>Бърз достъп</h3>
+          <p><a href="recycling.html">Рециклиране</a></p>
+          <p><a href="materials.html">Материали</a></p>
+          <p><a href="contact.html">Свържете се с нас</a></p>
+        </div>
+        <div class="footer-right">
+          <h3>Език</h3>
+          <p><a href="index.html">Български</a></p>
+          <p><a href="#">Английски</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright SOLAR GREEN 2025</p>
+        <p><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
