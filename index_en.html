@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Начална страница</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.23.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.1/firebase-database.js"></script>
+
+    <script>
+      // Your Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "solargreen-3ae9d", //Your Project ID
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <style>
+      body {
+        font-family: "mundial", sans-serif, "mundial", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .header {
+        background-color: #2e7d32;
+        padding: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo img {
+        width: 250px;
+        height: auto;
+      }
+
+      .nav {
+        display: flex;
+        gap: 50px; /* Намаляваме разстоянието между елементите */
+        margin-right: 10%;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 2em;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: #a5d6a7;
+      }
+
+      .content {
+        padding: 0px 0px;
+      }
+
+      .content h2 {
+        color: #2e7d32;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeInUp 0.5s forwards;
+      }
+
+      .content p,
+      .content ul {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        line-height: 1.6;
+        opacity: 0;
+        animation: fadeInUp 0.5s forwards;
+        animation-delay: 0.2s;
+      }
+
+      .gif {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url("gif/gifHomePage-ezgif.com-effects.gif") no-repeat
+          center center;
+        background-size: cover;
+        background-position: center;
+        margin-top: 0;
+        text-align: left;
+      }
+
+      .gif h2 {
+        margin-top: 20%;
+        font-size: 3.5em;
+        color: white;
+        text-align: left;
+        max-width: 80%;
+        padding-left: 3%;
+      }
+
+      .goal {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("images/darker_image.png") no-repeat center center;
+        background-size: cover;
+        margin-top: -145px;
+        text-align: left;
+      }
+
+      .goal h2 {
+        margin-top: -290px;
+        font-size: 3.5em;
+        color: white;
+        text-align: left;
+        max-width: 80%;
+        padding-left: 20px;
+        border-bottom: 4px solid #ffee00;
+      }
+
+      .goal p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        text-align: left;
+        max-width: 600px;
+        line-height: 1.3;
+        padding-right: 250px;
+      }
+
+      .benefits h2 {
+        margin-top: 100px;
+        font-size: 3.5em;
+        color: #303133;
+        text-align: left;
+        max-width: 80%;
+        padding-left: 20px;
+        border-bottom: 4px solid #ffee00;
+      }
+
+      .challenge h2 {
+        margin-top: 200px;
+        font-size: 3.5em;
+        color: #303133;
+        text-align: left;
+        max-width: 80%;
+        padding-left: 20px;
+        border-bottom: 4px solid #ffee00;
+      }
+
+      .challenge p {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #303133;
+        text-align: center;
+        max-width: 1000px;
+        line-height: 1.3;
+        margin-top: 100px;
+      }
+
+      .footer {
+        background-color: #1b5e20;
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInScale {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav a {
+          font-size: 1.5em; /* Намаляване на размера на текста за мобилни устройства */
+          margin: 10px 0;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .gif h2 {
+          font-size: 2.5em; /* Намаляване на шрифта на заглавието */
+          margin-top: 350px;
+        }
+
+        .goal h2 {
+          font-size: 2.5em;
+          margin-top: -200px;
+        }
+
+        .goal p {
+          font-size: 1.5rem;
+          padding-right: 20px;
+        }
+
+        .benefits h2,
+        .challenge h2 {
+          font-size: 2.5em;
+        }
+
+        .content ul {
+          margin-left: 0;
+          padding: 0;
+        }
+
+        .content ul li {
+          padding: 20px;
+        }
+
+        .footer div {
+          display: block;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .footer img {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .nav a {
+          font-size: 1.2em; /* По-малък размер за мобилни телефони */
+        }
+
+        .goal h2,
+        .benefits h2,
+        .challenge h2 {
+          font-size: 2.2em;
+          margin-left: 20px;
+        }
+
+        .goal p,
+        .challenge p {
+          font-size: 1.3rem;
+          padding-right: 0;
+        }
+
+        .footer {
+          font-size: 0.9em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="images/solargreenlogo-removebg.png" alt="" />
+      </div>
+      <div class="nav">
+        <a href="recycling.html">Recycling</a>
+        <a href="materials.html">Materials</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html"
+          ><img
+            src="images/bgFlag.png"
+            style="
+              height: auto;
+              width: 100px;
+              border-radius: 10%;
+              border-color: #2e7d32;
+            "
+            alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="gif">
+      <h2>,,We are the solution to your broken solar panels."</h2>
+    </div>
+
+    <div class="content">
+      <div class="goal">
+        <h2>Our goal</h2>
+        <p>
+          Our goal is to simplify the recycling process by providing a platform
+          to connect with us.
+        </p>
+      </div>
+
+      <div class="benefits">
+        <h2>Benefits from recycling</h2>
+        <ul>
+          <li>Reducing waste and polution</li>
+          <li>Saving valuable raw materials</li>
+          <li>Decreasing carbon footprint</li>
+          <li>Устойчиво енергийно бъдеще</li>
+          <li>Sustainable energy future</li>
+        </ul>
+      </div>
+
+      <div class="challenge">
+        <h2>THE CHALLENGE THAT WE'RE FACING</h2>
+        <p>
+          <q
+            >Panel recycling is still an underdeveloped industry, requiring
+            innovative solutions and support.</q
+          >
+        </p>
+      </div>
+    </div>
+
+    <footer
+      style="
+        background-color: #2e7d32;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        "
+      >
+        <div
+          style="
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <img
+            src="images/solargreenlogo-removebg.png"
+            alt="Solar Materials Logo"
+            style="width: 300px; margin-right: auto"
+          />
+          <div>
+            <h2 style="margin: 0">SOLAR GREEN</h2>
+            <p>Пловдив, България</p>
+            <p><q>ул.Чемшир 11</q></p>
+            <p>
+              📧
+              <a
+                href="mailto:info@solargreen.com"
+                style="color: white; text-decoration: none"
+                >info@solargreen.com</a
+              >
+            </p>
+            <p>📞 +359 7777 7777</p>
+          </div>
+        </div>
+
+        <div
+          style="
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            margin-left: 50px;
+          "
+        >
+          <h3>Бърз достъп</h3>
+          <p>
+            <a href="recycling.html" style="color: white; text-decoration: none"
+              >Рециклиране</a
+            >
+          </p>
+          <p>
+            <a href="materials.html" style="color: white; text-decoration: none"
+              >Материали</a
+            >
+          </p>
+          <p>
+            <a href="contact.html" style="color: white; text-decoration: none"
+              >Свържете се с нас</a
+            >
+          </p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; text-align: left">
+          <h3>Език</h3>
+          <p>
+            <a href="index.html" style="color: white; text-decoration: none"
+              >Български</a
+            >
+          </p>
+          <p>
+            <a href="#" style="color: white; text-decoration: none"
+              >Английски</a
+            >
+          </p>
+        </div>
+      </div>
+      <div style="margin-top: 20px; text-align: center">
+        <p>Copyright SOLAR GREEN 2025</p>
+        <p>
+          <a href="#" style="color: white; text-decoration: none">Imprint</a> |
+          <a href="#" style="color: white; text-decoration: none"
+            >Privacy Policy</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
