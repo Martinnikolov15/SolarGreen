@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "mundial", sans-serif, "mundial", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding: none;
+    overflow-x: hidden;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  .header {
+    background-color: #2e7d32;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 250px;
+    height: auto;
+  }
+
+  .nav {
+    display: flex;
+    gap: 50px; /* Намаляваме разстоянието между елементите */
+    margin-right: 10%;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.3em;
+    transition: color 0.3s;
+  }
+
+  .nav a:hover {
+    color: #a5d6a7;
+  }
+
+  .recycling {
+    display: flex;
+    align-items: center; /* Центрира съдържанието вертикално */
+    justify-content: space-between; /* Разделя текста и снимката */
+    width: 100%;
+    padding: 5%;
+    background-color: #303133;
+  }
+
+  .recycling-text {
+    max-width: 50%; /* Ограничаваме ширината на текста */
+  }
+
+  .recycling h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10%;
+  }
+
+  .recycling p {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .recycling img {
+    width: 40%;
+    height: auto;
+    float: right;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px;
+  }
+  .footer-middle,
+  .footer-right {
+    padding-top: 5%;
+    font-size: 150%;
+  }
+
+  .footer-left img {
+    width: 80%;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }

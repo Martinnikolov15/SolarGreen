@@ -12,179 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        font-family: "mundial", sans-serif, "mundial", sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-      .header {
-        background-color: #2e7d32;
-        padding: 10px;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo img {
-        width: 250px;
-        height: auto;
-      }
-
-      .nav {
-        display: flex;
-        gap: 50px; /* Намаляваме разстоянието между елементите */
-        margin-right: 10%;
-      }
-
-      .nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 2.3em;
-        transition: color 0.3s;
-      }
-
-      .nav a:hover {
-        color: #a5d6a7;
-      }
-
-      .materials {
-        background-image: url("images/background.forest.webp");
-
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-        height: 100vh;
-        font-size: 2em;
-      }
-      .materials h1 {
-        margin: 0;
-      }
-      .transparentBox {
-        background-color: rgba(255, 255, 255, 0.7);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-      }
-
-      footer {
-        width: 100%;
-        background-color: #2e7d32;
-        color: white;
-        margin-bottom: none;
-        text-align: center;
-      }
-      footer a {
-        color: white;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .footer-left,
-      .footer-middle,
-      .footer-right {
-        flex: 1;
-        min-width: 250px;
-        text-align: center;
-        padding: 10px;
-      }
-      .footer-middle,
-      .footer-right {
-        padding-top: 5%;
-        font-size: 150%;
-      }
-
-      .footer-left img {
-        width: 80%;
-      }
-
-      .footer-bottom {
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      .dropdown {
-        width: 500px;
-        padding-top: 10%;
-        align-self: center;
-      }
-      .dropdown-title {
-        background: #333;
-        color: white;
-        padding: 20px;
-        border-style: solid;
-        border-color: yellow;
-        border-width: 1px;
-        border-left: none;
-        border-right: none;
-        margin-left: 200px;
-        cursor: pointer;
-        width: 100%;
-        font-weight: bolder;
-        font-size: large;
-        transition: color 0.3s;
-      }
-      .dropdown-title:hover {
-        color: #999;
-      }
-      .dropdown-content {
-        display: none;
-        padding: 20px;
-        padding-right: none;
-        height: 0;
-        opacity: 0;
-        margin-left: 200px;
-        background: #333;
-        overflow: hidden;
-        width: 100%;
-        color: white;
-        border-style: solid;
-        border-color: yellow;
-        border-width: 1px;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        transition: height 0.3s ease, opacity 0.3s ease;
-      }
-      .dropdown-content.active {
-        height: auto; /* Allow content to expand */
-        opacity: 1;
-      }
-      .active {
-        display: block;
-      }
-      .activeDropdown {
-        border-bottom: none;
-      }
-    </style>
+    <link rel="stylesheet" href="/stylesheets/materialsStylesheet.css"> 
+    <link rel="icon" href="/images/favicon.ico">
   </head>
   <body style="padding: none">
     <div class="header">
@@ -266,7 +95,7 @@
         <div class="dropdown-content" id="content3">
           Алуминият в соларните панели е основно в рамката и съставлява около
           15% от масата. Възстановеният алуминий се предава на големи леярни,
-          спестявайки около 95% енергия спрямо новодобития..
+          спестявайки около 95% енергия спрямо новодобития.
         </div>
         <div
           class="dropdown-title"
@@ -303,8 +132,7 @@
         <div class="dropdown-content" id="content6">
           Силицият е техническото сърце на соларния панел. Той преобразува
           слънчевата енергия в електрическа чрез фотоелектрическия ефект.
-          Възстановеният силиций се преработва в чист силиций от нашия партньор
-          Circular Silicon.
+          Възстановеният силиций се преработва в чист силиций от наш партньор.
         </div>
       </div>
     </div>
@@ -339,37 +167,31 @@
     </script>
     <footer>
       <div class="footer-container">
-        <div class="footer-left">
-          <img
-            src="images/solargreenlogo-removebg.png"
-            alt="Solar Materials Logo"
-          />
-          <div>
-            <h2>SOLAR GREEN</h2>
-            <p>Пловдив, България</p>
-            <p>ул.Чемшир 11</p>
-            <p>
-              📧 <a href="mailto:info@solargreen.com">info@solargreen.com</a>
-            </p>
-            <p>📞 +359 7777 7777</p>
+          <div class="footer-left">
+              <img src="images/solargreenlogo-removebg.png" alt="Solar Materials Logo">
+              <div>
+                  <p style="margin-top: 5%;">Пловдив, България</p>
+                  <p>ул.Чемшир 11</p>
+                  <p>📧 <a href="mailto:info@solargreen.com">info@solargreen.com</a></p>
+                  <p>📞 +359 7777 7777</p>
+              </div>
           </div>
-        </div>
-        <div class="footer-middle">
-          <h3>Бърз достъп</h3>
-          <p><a href="recycling.html">Рециклиране</a></p>
-          <p><a href="materials.html">Материали</a></p>
-          <p><a href="contact.html">Свържете се с нас</a></p>
-        </div>
-        <div class="footer-right">
-          <h3>Език</h3>
-          <p><a href="index.html">Български</a></p>
-          <p><a href="#">Английски</a></p>
-        </div>
+          <div class="footer-middle">
+              <h3 style="margin-bottom: 5%;">Бърз достъп</h3>
+              <p><a href="recycling.html">Рециклиране</a></p>
+              <p><a href="materials.html">Материали</a></p>
+              <p><a href="contact.html">Свържете се с нас</a></p>
+          </div>
+          <div class="footer-right">
+              <h3 style="margin-bottom: 5%;">Език</h3>
+              <p><a href="materials.html">Български</a></p>
+              <p><a href="materials_en.html">English</a></p>
+          </div>
       </div>
       <div class="footer-bottom">
-        <p>Copyright SOLAR GREEN 2025</p>
-        <p><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></p>
+          <p>Copyright SOLAR GREEN 2025</p>
+          <p><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></p>
       </div>
-    </footer>
+  </footer>
   </body>
 </html>
