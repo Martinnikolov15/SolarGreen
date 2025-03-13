@@ -12,9 +12,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="/stylesheets/materialsStylesheet.css"> 
-    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/materialsStylesheet.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+    <style></style>
   </head>
+
   <body style="padding: none">
     <div class="header">
       <div class="logo">
@@ -22,12 +24,13 @@
           <img src="images/solargreenlogo-removebg.png" alt="" />
         </a>
       </div>
+
       <div class="nav">
         <a href="recycling.html">Рециклиране</a>
         <a href="materials.html">Материали</a>
         <a href="contact.html">Свържете се с нас</a>
-        <a href="materials_en.html"
-          ><img
+        <a href="materials_en.html">
+          <img
             src="images/ukFlag.png"
             style="
               height: auto;
@@ -36,9 +39,11 @@
               border-color: #2e7d32;
             "
             alt=""
-        /></a>
+          />
+        </a>
       </div>
     </div>
+
     <div class="materials">
       <div class="transparentBox">
         <h1 style="padding-left: 5%; padding-top: 20%">Материали</h1>
@@ -58,140 +63,148 @@
         src="images/recycled_panel.png"
         style="float: right; height: 100%; width: 50%; max-width: 100%"
       />
-      <div class="dropdown">
-        <div
-          class="dropdown-title"
-          id="title1"
-          onclick="toggleDropdown('content1')"
-        >
-          стъкло
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" id="" onclick="toggleAccordion(this)">
+            стъкло
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Защитното стъкло на соларния панел съставлява около 70% от теглото
+              му. Чрез нашата усъвършенствана технология за рециклиране
+              възстановяваме стъклото с висока чистота, подходящо за контейнерно
+              и в бъдеще за соларно стъкло.
+            </p>
+          </div>
         </div>
-        <div class="dropdown-content" id="content1">
-          Защитното стъкло на соларния панел съставлява около 70% от теглото му.
-          Чрез нашата усъвършенствана технология за рециклиране възстановяваме
-          стъклото с висока чистота, подходящо за контейнерно и в бъдеще за
-          соларно стъкло.
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            пластмаса
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              В соларните панели се използват различни пластмаси, като най-често
+              срещаните са EVA и PVF. Те съставляват около 9% от общата маса.
+              Въпреки трудното им рециклиране, ние търсим нови приложения, далеч
+              от изгарянето.
+            </p>
+          </div>
         </div>
-        <div
-          class="dropdown-title"
-          id="title2"
-          onclick="toggleDropdown('content2')"
-        >
-          пластмаса
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            алуминий
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Алуминият в соларните панели е основно в рамката и съставлява
+              около 15% от масата. Възстановеният алуминий се предава на големи
+              леярни, спестявайки около 95% енергия спрямо новодобития.
+            </p>
+          </div>
         </div>
-        <div class="dropdown-content" id="content2">
-          В соларните панели се използват различни пластмаси, като най-често
-          срещаните са EVA и PVF. Те съставляват около 9% от общата маса.
-          Въпреки трудното им рециклиране, ние търсим нови приложения, далеч от
-          изгарянето.
+        <div class="accordion-item">
+          <div class="accordion-header" id="" onclick="toggleAccordion(this)">
+            мед
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Шините и свързващите кабели на соларния панел съдържат 1% мед. Тя
+              може да бъде рециклирана на 100% и използвана за нови кабели или
+              проводници.
+            </p>
+          </div>
         </div>
-        <div
-          class="dropdown-title"
-          id="title3"
-          onclick="toggleDropdown('content3')"
-        >
-          алуминий
+        <div class="accordion-item">
+          <div class="accordion-header" id="" onclick="toggleAccordion(this)">
+            сребро
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Среброто съставлява само 0,1% от масата на соларния панел, но е
+              най-ценният му материал. То се намира върху предната и задната
+              част на клетките и служи като електрически проводник. След
+              рециклиране се пречиства и използва отново за технически
+              приложения.
+            </p>
+          </div>
         </div>
-        <div class="dropdown-content" id="content3">
-          Алуминият в соларните панели е основно в рамката и съставлява около
-          15% от масата. Възстановеният алуминий се предава на големи леярни,
-          спестявайки около 95% енергия спрямо новодобития.
-        </div>
-        <div
-          class="dropdown-title"
-          id="title4"
-          onclick="toggleDropdown('content4')"
-        >
-          мед
-        </div>
-        <div class="dropdown-content" id="content4">
-          Шините и свързващите кабели на соларния панел съдържат 1% мед. Тя може
-          да бъде рециклирана на 100% и използвана за нови кабели или
-          проводници.
-        </div>
-        <div
-          class="dropdown-title"
-          id="title5"
-          onclick="toggleDropdown('content5')"
-        >
-          сребро
-        </div>
-        <div class="dropdown-content" id="content5">
-          Среброто съставлява само 0,1% от масата на соларния панел, но е
-          най-ценният му материал. То се намира върху предната и задната част на
-          клетките и служи като електрически проводник. След рециклиране се
-          пречиства и използва отново за технически приложения.
-        </div>
-        <div
-          class="dropdown-title"
-          id="title6"
-          onclick="toggleDropdown('content6')"
-        >
-          силиций
-        </div>
-        <div class="dropdown-content" id="content6">
-          Силицият е техническото сърце на соларния панел. Той преобразува
-          слънчевата енергия в електрическа чрез фотоелектрическия ефект.
-          Възстановеният силиций се преработва в чист силиций от наш партньор.
+        <div class="accordion-item">
+          <div class="accordion-header" id="" onclick="toggleAccordion(this)">
+            силиций
+            <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Силицият е техническото сърце на соларния панел. Той преобразува
+              слънчевата енергия в електрическа чрез фотоелектрическия ефект.
+              Възстановеният силиций се преработва в чист силиций от наш
+              партньор.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
     <script>
-      var titleId;
-      function toggleDropdown(id) {
-        var content = document.getElementById(id);
+      function toggleAccordion(header) {
+        const accordion = document.querySelectorAll(".accordion-content");
+        accordion.forEach((content) => {
+          if (content !== header.nextElementSibling) {
+            content.classList.remove("active");
+          }
+        });
+
+        const content = header.nextElementSibling;
         content.classList.toggle("active");
-        switch (id) {
-          case "content1":
-            titleId = "title1";
-            break;
-          case "content2":
-            titleId = "title2";
-            break;
-          case "content3":
-            titleId = "title3";
-            break;
-          case "content4":
-            titleId = "title4";
-            break;
-          case "content5":
-            titleId = "title5";
-            break;
-          case "content6":
-            titleId = "title6";
-            break;
+
+        const allHeaders = document.querySelectorAll(".accordion-header span");
+        allHeaders.forEach((span) => (span.textContent = "+"));
+        if (content.classList.contains("active")) {
+          header.querySelector("span").textContent = "-";
+        } else {
+          header.querySelector("span").textContent = "+";
         }
-        var styleChange = document.getElementById(titleId);
-        styleChange.classList.toggle("activeDropdown");
       }
     </script>
+
     <footer>
       <div class="footer-container">
-          <div class="footer-left">
-              <img src="images/solargreenlogo-removebg.png" alt="Solar Materials Logo">
-              <div>
-                  <p style="margin-top: 5%;">Пловдив, България</p>
-                  <p>ул.Чемшир 11</p>
-                  <p>📧 <a href="mailto:info@solargreen.com">info@solargreen.com</a></p>
-                  <p>📞 +359 7777 7777</p>
-              </div>
+        <div class="footer-left">
+          <img
+            src="images/solargreenlogo-removebg.png"
+            alt="Solar Materials Logo"
+          />
+          <div>
+            <p style="margin-top: 5%">Пловдив, България</p>
+            <p>ул.Чемшир 11</p>
+            <p>
+              📧 <a href="mailto:info@solargreen.com">info@solargreen.com</a>
+            </p>
+            <p>📞 +359 7777 7777</p>
           </div>
-          <div class="footer-middle">
-              <h3 style="margin-bottom: 5%;">Бърз достъп</h3>
-              <p><a href="recycling.html">Рециклиране</a></p>
-              <p><a href="materials.html">Материали</a></p>
-              <p><a href="contact.html">Свържете се с нас</a></p>
-          </div>
-          <div class="footer-right">
-              <h3 style="margin-bottom: 5%;">Език</h3>
-              <p><a href="materials.html">Български</a></p>
-              <p><a href="materials_en.html">English</a></p>
-          </div>
+        </div>
+        <div class="footer-middle">
+          <h3 style="margin-bottom: 5%">Бърз достъп</h3>
+          <p><a href="recycling.html">Рециклиране</a></p>
+          <p><a href="materials.html">Материали</a></p>
+          <p><a href="contact.html">Свържете се с нас</a></p>
+        </div>
+        <div class="footer-right">
+          <h3 style="margin-bottom: 5%">Език</h3>
+          <p><a href="materials.html">Български</a></p>
+          <p><a href="materials_en.html">English</a></p>
+        </div>
       </div>
       <div class="footer-bottom">
-          <p>Copyright SOLAR GREEN 2025</p>
-          <p><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></p>
+        <p>Copyright SOLAR GREEN 2025</p>
+        <p><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></p>
       </div>
-  </footer>
+    </footer>
   </body>
 </html>
