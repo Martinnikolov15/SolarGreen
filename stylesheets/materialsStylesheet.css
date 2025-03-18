@@ -59,7 +59,8 @@ body {
   margin: 0;
 }
 .transparentBox {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
+  color :white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
