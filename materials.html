@@ -157,12 +157,14 @@
         accordion.forEach((content) => {
           if (content !== header.nextElementSibling) {
             content.classList.remove("active");
+            content.previousElementSibling.classList.remove('active');
           }
         });
 
         const content = header.nextElementSibling;
         content.classList.toggle("active");
-
+        header.classList.toggle('active');
+       
         const allHeaders = document.querySelectorAll(".accordion-header span");
         allHeaders.forEach((span) => (span.textContent = "+"));
         if (content.classList.contains("active")) {

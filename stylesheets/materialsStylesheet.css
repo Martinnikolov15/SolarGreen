@@ -157,7 +157,7 @@ footer a:hover {
 }
 
 .accordion-header:hover {
-  background: #999;
+  color: lightgray;
 }
 
 .accordion-content {
@@ -176,7 +176,7 @@ footer a:hover {
   max-height: 150px;
   padding: 15px;
 }
-.activeAccordion {
+.accordion-header.active {
   border-bottom: none;
-  border-radius: 10px;
+  
 }

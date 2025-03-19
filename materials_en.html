@@ -65,10 +65,10 @@
           </div>
           <div class="accordion-content">
             <p>
-              Защитното стъкло на соларния панел съставлява около 70% от теглото
-              му. Чрез нашата усъвършенствана технология за рециклиране
-              възстановяваме стъклото с висока чистота, подходящо за контейнерно
-              и в бъдеще за соларно стъкло.
+              The protective glass of a solar panel makes up about 70% of its weight.
+              Using our advanced recycling technology, 
+              we recover high-purity glass suitable for container and, 
+              in the future, solar glass.
             </p>
           </div>
         </div>
@@ -149,12 +149,14 @@
         accordion.forEach((content) => {
           if (content !== header.nextElementSibling) {
             content.classList.remove("active");
+            content.previousElementSibling.classList.remove('active');
           }
         });
 
         const content = header.nextElementSibling;
         content.classList.toggle("active");
-
+        header.classList.toggle('active');
+       
         const allHeaders = document.querySelectorAll(".accordion-header span");
         allHeaders.forEach((span) => (span.textContent = "+"));
         if (content.classList.contains("active")) {
