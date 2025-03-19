@@ -30,7 +30,7 @@
   }
 
   .logo img {
-      width: 250px;
+      width: 15vw;
       height: auto;
   }
 
@@ -38,6 +38,7 @@
       display: flex;
       gap: 50px; /* Намаляваме разстоянието между елементите */
       margin-right: 10%;
+      position: sticky;
   }
 
   .nav a {
@@ -232,11 +233,23 @@ text-decoration: underline;
   }
 
   @media (max-width: 768px) {
+    .logo img {
+        width: 25vw;
+        height: auto;
+    }
+     .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8vw;
+     }
       .nav a {
           font-size: 1.5em; /* Намаляване на размера на текста за мобилни устройства */
           margin: 10px 0;
+          display: block;
+          height: 1vw;
+          
       }
-
+      
       .content {
           padding: 20px;
       }
@@ -245,7 +258,7 @@ text-decoration: underline;
           font-size: 2.5em; /* Намаляване на шрифта на заглавието */
           margin-top: 350px;
       }
-
+       
       .goal h2 {
           font-size: 2.5em;
           margin-top: -200px;
